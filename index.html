@@ -4,6 +4,7 @@
     <title>Violence in Colombia</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.looker.com/embed/sdk/looker-embed.min.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -19,6 +20,20 @@
       </nav>
     </header>
     <main>
+      <main>
+      <section id="dashboard">
+        <h2>Looker Dashboard</h2>
+        <div id="dashboard-container"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Your Name, Year</p>
+    </footer>
+    <script>
+      lookerEmbedSDK.init('https://lookerstudio.google.com/reporting/a32d2e94-7032-4c32-9731-a22bc8c809ba');
+      var dashboard = lookerEmbedSDK.createDashboardWithId('sraED');
+      dashboard.appendTo('#dashboard-container');
+    </script>
       <section id="overview">
         <h2>Overview</h2>
         <p>Provide a brief overview of the violence in Colombia, including statistics and historical context.</p>
